@@ -24,11 +24,12 @@ def submit():
     dealer = request.form['dealer']
     rating = request.form['rating']
     comments = request.form['comments']
-    if customer == '' or dealer == ''
-    return render_template('index.html', message='Please enter required field')
-    print(customer, dealer, rating, comments)
+    # print(customer, dealer, rating, comments)
+    if customer == '' or dealer == '': 
+      return render_template('index.html', message='Please enter required field')
+    
+    return render_template('success.html')
 
 
 if __name__ == '__main__':
-  
   app.run()
