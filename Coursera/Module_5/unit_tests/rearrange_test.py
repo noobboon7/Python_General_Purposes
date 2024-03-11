@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from rearrange import rearrange_name
+from Module_5.unit_tests.rearrange import rearrange_name
 import unittest
 
 class TestRearrange(unittest.TestCase):
