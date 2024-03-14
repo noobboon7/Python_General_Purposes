@@ -38,7 +38,7 @@ Examples of frameworks include the NIST Cybersecurity Framework (CSF) and the NI
 
 **Note:** Specifications and guidelines can change depending on the type of organization you work for.
 
-In addition to the [NIST CSFOpens in a new tab](https://www.nist.gov/cyberframework) and [NIST RMFOpens in a new tab](https://csrc.nist.gov/projects/risk-management/about-rmf), there are several other controls, frameworks, and compliance standards that are important for security professionals to be familiar with to help keep organizations and the people they serve safe.
+In addition to the [NIST CSF](https://www.nist.gov/cyberframework) and [NIST RMF](https://csrc.nist.gov/projects/risk-management/about-rmf), there are several other controls, frameworks, and compliance standards that are important for security professionals to be familiar with to help keep organizations and the people they serve safe.
 
 ### **The Federal Energy Regulatory Commission - North American Electric Reliability Corporation (FERC-NERC)**
 
