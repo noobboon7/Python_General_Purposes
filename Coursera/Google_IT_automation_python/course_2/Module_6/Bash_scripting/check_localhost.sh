@@ -10,4 +10,7 @@ else
 
 fi
 
+#  Added a check to see if the PATH environment variable is not empty.
+# if test -n "$PATH"; then echo "Your path is not empty"; fi
 
+if [ -n "$PATH" ]; then echo "Your path is not empty"; fi
