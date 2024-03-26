@@ -53,3 +53,21 @@ sorted_errors = sorted(error_message_count.items(), key=operator.itemgetter(1), 
 sorted_users = sorted(user_entries_count.items()) # need to order  by username here.
 
 print(sorted_errors, sorted_users)
+
+
+error_headers = ['Error','Count']
+with open("error_message.csv", "w") as errors:
+  writer = csv.writer(errors)
+  writer.writerow(error_headers)
+  writer.writerows(sorted_errors)
+  errors.close()
+  
+user_headers = ['Username','ERROR', 'INFO']
+with open("user_statistics.csv", "w") as stats:
+  writer = csv.DictWriter(stats, fieldnames=user_headers)
+  writer.writeheader()
+  for el in sorted_users:
+    writer.writerow(el[1])
+  stats.close()
+  
+  
