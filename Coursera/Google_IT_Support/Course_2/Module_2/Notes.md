@@ -70,3 +70,57 @@ Explanation:
 
 The subnet mask has 27 ones followed by 5 zeros. Therefore, the shorthand notation is /27.
 ```
+
+## Routing Protocols
+
+Routing protocols are used by routers to share information about the best paths to destination networks. There are two main types of routing protocols:
+
+* **Interior Gateway Protocols (IGPs)** are used within a single autonomous system (AS).
+* **Exterior Gateway Protocols (EGPs)** are used between different ASs.
+
+### IGPs
+
+IGPs are further divided into two types:
+
+* **Link State Routing Protocols** advertise the state of each of their interfaces.
+* **Distance Vector Routing Protocols** only advertise the distance to each destination network.
+Link state routing protocols are more complex and require more resources than distance vector routing protocols, but they are also more accurate and efficient.
+
+Distance vector routing protocols are simpler and require fewer resources, but they are less accurate and efficient than link state routing protocols.
+
+## Exterior Gateway Protocols (EGPs)
+
+* Used to communicate data between routers representing the edges of an autonomous system (AS).
+* Routers use EGPs when they need to share information across different organizations.
+* EGPs are key to the Internet operating as it does today.
+
+### The Internet
+
+* An enormous mesh of autonomous systems.
+* Core Internet routers need to know about autonomous systems in order to properly forward traffic.
+* The goal of core Internet routers is to get data to the edge router of an autonomous system.
+
+### IANA (Internet Assigned Numbers Authority)
+
+* A nonprofit organization that helps manage things like IP address allocation.
+* The Internet couldn't function without a single authority for these sorts of issues.
+* The IANA is also responsible for ASN (Autonomous System Number) allocation.
+
+### ASNs (Autonomous System Numbers)
+
+* Numbers assigned to individual autonomous systems.
+* ASNs are 32-bit numbers, but unlike IP addresses, they're normally referred to as just a single decimal number.
+* ASNs represent entire autonomous systems.
+
+### Understanding EGPs
+
+* Unless you work at an Internet service provider, understanding more details about how EGPs work is out of scope for most people in IT.
+* However, grasping the basics of autonomous systems, ASNs, and how core Internet routers route traffic between them is important to understand some of the basic building blocks of the Internet
+
+## IPv4 Address Space Exhaustion and RFC 1918
+
+* In 1996, it became apparent that the IPv4 address space was insufficient to accommodate the growing number of devices connected to the Internet.
+* RFC 1918 was published to define non-routable address space, which can be used by anyone without being routed to the Internet.
+* Three ranges of IP addresses were designated as non-routable: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.
+* These ranges can be used for internal networks without the need for coordination with other organizations.
+* Interior gateway protocols can route these address spaces within an autonomous system, but exterior gateway protocols will not.
