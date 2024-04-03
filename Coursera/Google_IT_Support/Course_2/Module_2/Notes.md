@@ -124,3 +124,66 @@ Distance vector routing protocols are simpler and require fewer resources, but t
 * Three ranges of IP addresses were designated as non-routable: 10.0.0.0/8, 172.16.0.0/12, and 192.168.0.0/16.
 * These ranges can be used for internal networks without the need for coordination with other organizations.
 * Interior gateway protocols can route these address spaces within an autonomous system, but exterior gateway protocols will not.
+
+## TCP Segment Structure
+
+A TCP segment consists of a header and a data section. The header contains the following fields:
+
+* **Source port:** The port of the service that sent the segment.
+* **Destination port:** The port of the service that the segment is intended for.
+* **Sequence number:** A 32-bit number that identifies the segment's position in a sequence of segments.
+* **Acknowledgment number:** A 32-bit number that indicates the next segment that the sender expects to receive.
+* **Data offset:** A 4-bit number that indicates the length of the TCP header.
+* *Control flags:* Six bits that are used to control the behavior of the TCP connection.
+* **TCP window:** A 16-bit number that specifies the range of sequence numbers that the sender can send before receiving an acknowledgment.
+* **Checksum:** A 16-bit number that is used to check for errors in the segment.
+* **Urgent pointer:** A 16-bit number that is used to indicate the location of urgent data in the segment.
+* **Options**: A variable-length field that is used to specify additional options for the TCP connection.
+* **Padding:** A variable-length field that is used to ensure that the data payload section begins at the expected location.
+
+The data section of the TCP segment contains the data that is being transmitted.
+
+### TCP Control Flags
+
+TCP uses six control flags to establish and close connections:
+
+* **URG:** Urgent
+* **ACK:** Acknowledged
+* **PSH:** Push
+* **RST:** Reset
+* **SYN:** Synchronize
+* **FIN:** Finish
+
+#### Establishing a TCP Connection (Three-Way Handshake)
+
+1. Computer A sends a SYN flag to Computer B.
+2. Computer B responds with a SYN/ACK flag.
+3. Computer A responds with an ACK flag.
+
+#### Closing a TCP Connection (Four-Way Handshake)
+
+1. One computer sends a FIN flag.
+2. The other computer acknowledges with an ACK flag.
+3. If the other computer is also ready to close, it sends a FIN flag.
+4. The first computer acknowledges with an ACK flag.
+
+#### Additional Information
+
+* TCP connections operate in full duplex mode, meaning both sides can send and receive data simultaneously.
+* Each segment sent should be acknowledged with an ACK flag.
+* A TCP connection can stay open in simplex mode with only one side closing the connection, but this is rare.
+
+### Common TCP Socket States
+
+* **LISTEN**: Ready and listening for incoming connections (server-side only)
+* **SYN_SENT**: Synchronization request sent, but connection not yet established (client-side only)
+* **SYN_RECEIVED**: Synchronization request received and SYN/ACK sent, but final ACK not yet received (server-side only)
+* **ESTABLISHED**: TCP connection is working and both sides can send data
+* **FIN_WAIT**: FIN sent, but corresponding ACK not yet received
+* **CLOSE_WAIT**: Connection closed at TCP layer, but application hasn't released its hold on the socket
+* **CLOSED**: Connection fully terminated and no further communication is possible
+
+#### Additional Notes
+
+* Socket states and their names can vary from operating system to operating system.
+* When troubleshooting TCP layer issues, check the exact socket state definitions for the systems you're working with.
