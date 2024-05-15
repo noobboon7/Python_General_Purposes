@@ -3,9 +3,10 @@
 ## Project 1 : Scale and convert images using PIL
 
 ### Introduction
+
 Your company is in the process of updating its website, and they’ve hired a design contractor to create some new icon graphics for the site. But the contractor has delivered the final designs in the wrong format -- rotated 90° and too large. Oof! You’re not able to get in contact with the designers and your own deadline is approaching fast. You’ll need to use Python to get these images ready for launch.
 
-#### Tasks 
+#### Tasks
 
 Use the Python Imaging Library to do the following to a batch of images:
 
@@ -20,6 +21,7 @@ Use the Python Imaging Library to do the following to a batch of images:
 ## Project 2 : Process text files with Python dictionaries and upload to running web service
 
 ### Introduction
+
 You’re working at a company that sells second-hand cars. Your company constantly collects feedback in the form of customer reviews. Your manager asks you to take those reviews (saved as .txt files) and display them on your company’s website. To do this, you’ll need to write a script to convert those .txt files and process them into Python dictionaries, then upload the data onto your company’s website (currently using Django).
 
 #### Tasks
@@ -31,3 +33,17 @@ You’re working at a company that sells second-hand cars. Your company constant
 - Use the Python requests module to upload content to a running Web service
 
 - Understand basic operations for Python requests like GET and POST methods
+
+## Automatically generate a PDF and send it by email
+
+### Introduction
+
+You work for a company that sells second hand cars. Management wants to get a summary of the amounts of vehicles that have been sold at the end of every month. The company already has a web service which serves sales data at the end of every month but management wants an email to be sent out with an attached PDF so that data is more easily readable.
+
+#### Tasks
+
+- Write a script that summarizes and processes sales data into different categories
+
+- Generate a PDF using Python
+
+- Automatically send a PDF by email
