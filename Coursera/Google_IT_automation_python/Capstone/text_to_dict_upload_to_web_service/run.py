@@ -18,6 +18,3 @@ for feedback in os.listdir(path):
   response.raise_for_status()
   # if not response.ok:
   #   raise Exception("GET failed with status code {}".format(response.status_code))
-
-    
-
