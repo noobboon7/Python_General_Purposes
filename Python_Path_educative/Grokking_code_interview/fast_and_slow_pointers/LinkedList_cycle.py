@@ -1,5 +1,4 @@
-from linked_list_ds.linked_list import LinkedList
-from linked_list_ds.print_list import print_list_with_forward_arrow, print_list_with_forward_arrow_loop
+from linked_list_ds import LinkedList, print_list_with_forward_arrow, print_list_with_forward_arrow_loop
 
 def detect_cycle(head):
     if head is None:
