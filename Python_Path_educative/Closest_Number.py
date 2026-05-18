@@ -18,8 +18,7 @@ def find_closest_num(A, target):
     while low <= high:
         mid = (low + high)//2
 
-        # Ensure you do not read beyond the bounds
-        # of the list.
+        # Ensure you do not read beyond the bounds of the list.
         if mid+1 < len(A):
             min_diff_right = abs(A[mid + 1] - target)
         if mid > 0:
